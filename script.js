@@ -7,13 +7,15 @@ function results() {
     let answer = minus * 3.2;
     let result=full-answer;
     const total=result/Door
-
-    let grandresult=document.getElementById("ans");
-    FR= (truncator(total,3));
-grandresult.innerHTML=FR;
+    if(result==true){
+    var grandresult=document.getElementById("ans");
+    }
+    FR= (truncator(total,4));
+    
+grandresult.innerHTML=FR+"cm";
 }
 
 function truncator(numToTruncate, intDecimalPlaces) {    
-var numPower = Math.pow(10, intDecimalPlaces); // "numPowerConverter" might be better
+var numPower = Math.round(100, intDecimalPlaces); // "numPowerConverter" might be better
 return ~~(numToTruncate * numPower)/numPower;
 }
